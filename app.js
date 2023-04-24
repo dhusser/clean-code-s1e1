@@ -31,6 +31,8 @@ function addTask() {
   newTaskInput.value = '';
 }
 
+addButton.addEventListener('click', addTask);
+
 function createElementWithClass(tagName, classes) {
   const element = document.createElement(tagName);
   element.className = classes;
@@ -70,17 +72,16 @@ function deleteTask() {
 
 function taskCompleted() {
   const listItem = this.parentNode;
-  completedTasksHolder.appendChild(listItem);
+  completedTasksHolder.append(listItem);
   bindTaskEvents(listItem, taskIncomplete);
 }
 
 function taskIncomplete() {
   const listItem = this.parentNode;
-  incompleteTaskHolder.appendChild(listItem);
+  incompleteTaskHolder.append(listItem);
   bindTaskEvents(listItem, taskCompleted);
 }
 
-addButton.addEventListener('click', addTask);
 
 function bindTaskEvents(taskListItem, checkBoxEventHandler) {
   const checkBox = taskListItem.querySelector('.task__checkbox'),
@@ -89,7 +90,7 @@ function bindTaskEvents(taskListItem, checkBoxEventHandler) {
 
   editButton.addEventListener('click', editTask);
   deleteButton.addEventListener('click', deleteTask);
-  checkBox.addEventListener('change', checkBoxEventHandler);
+  checkBox.onchange = checkBoxEventHandler;
 }
 
 function bindTasks(holder, handler) {
