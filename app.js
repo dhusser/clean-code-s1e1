@@ -1,5 +1,5 @@
 const newTaskInput = document.getElementById('new-task'),
-      addButton = document.querySelector('button'),
+      addButton = document.querySelector('.button'),
       incompleteTaskHolder = document.getElementById('current-tasks'),
       completedTasksHolder = document.getElementById('completed-tasks');
 
@@ -43,8 +43,8 @@ function setButtonText(element, text) {
 
 function editTask() {
   const listItem = this.parentNode,
-        editInput = listItem.querySelector('input[type=text]'),
-        label = listItem.querySelector('span'),
+        editInput = listItem.querySelector('.task__input'),
+        label = listItem.querySelector('.task__name'),
         editBtn = listItem.querySelector('.button_edit'),
         containsClass = listItem.classList.contains('task_edit');
 
