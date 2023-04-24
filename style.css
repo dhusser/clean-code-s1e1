@@ -145,13 +145,13 @@ button {
   width: 226px;
 }
 
-.delete .remove {
+.button_delete .remove {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete .remove:hover {
+.button_delete .remove:hover {
   transform: rotateZ(0);
 }
 
