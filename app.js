@@ -6,7 +6,7 @@ const newTaskInput = document.getElementById('new-task'),
 function createNewTaskElement(taskString) {
   const listItem = createElementWithClass('li', 'task'),
         checkBox = createElementWithClass('input', 'task__checkbox'),
-        label = createElementWithClass('label', 'task__label'),
+        label = createElementWithClass('span', 'task__name'),
         editInput = createElementWithClass('input', 'task__input'),
         editButton = createElementWithClass('button', 'button button_edit'),
         deleteButton = createElementWithClass('button', 'button button_delete'),
@@ -44,7 +44,7 @@ function setButtonText(element, text) {
 function editTask() {
   const listItem = this.parentNode,
         editInput = listItem.querySelector('input[type=text]'),
-        label = listItem.querySelector('label'),
+        label = listItem.querySelector('span'),
         editBtn = listItem.querySelector('.button_edit'),
         containsClass = listItem.classList.contains('task_edit');
 

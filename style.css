@@ -36,7 +36,7 @@
 
 .new-task__input,
 .task__input,
-.task__label {
+.task__name {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -134,7 +134,7 @@ button {
   margin: 0 10px;
 }
 
-.task>.task__label {
+.task>.task__name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
@@ -156,7 +156,7 @@ button {
 }
 
 /* Completed */
-#completed-tasks .task__label {
+#completed-tasks .task__name {
   text-decoration: line-through color: #888;
 }
 
@@ -170,6 +170,6 @@ button {
   width: 224px;
 }
 
-.task_edit .task__label {
+.task_edit .task__name {
   display: none;
 }
